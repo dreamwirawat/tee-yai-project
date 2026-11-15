@@ -11,8 +11,8 @@ export default function NotFound() {
       <p className="font-heading text-6xl font-extrabold text-primary">404</p>
       <h1 className="font-heading text-2xl font-semibold">หม้อนี้ว่างเปล่า… ไม่พบหน้าที่คุณหา</h1>
       <p className="max-w-sm text-muted-foreground">ลิงก์อาจไม่ถูกต้องหรือหน้านี้ถูกย้ายไปแล้ว</p>
-      <Link href="/" className={cn(buttonVariants({ size: "lg" }), "mt-2 h-11 rounded-full px-8")}>
-        กลับหน้าแรก
+      <Link href="/landing" className={cn(buttonVariants({ size: "lg" }), "mt-2 h-11 rounded-full px-8")}>
+        ไปหน้าร้าน
       </Link>
     </main>
   );

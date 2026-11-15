@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
   },
+  // The Ops dashboard moved from /ops to /. Query strings (filters/tab) are passed through.
+  async redirects() {
+    return [{ source: "/ops", destination: "/", permanent: true }];
+  },
   turbopack: {
     rules: {
       "*.css": {

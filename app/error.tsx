@@ -16,13 +16,13 @@ export default function ErrorPage({ error, retry }: { error: unknown; retry: () 
         鍋
       </span>
       <h1 className="font-heading text-2xl font-semibold">น้ำซุปล้นหม้อ… เกิดข้อผิดพลาดบางอย่าง</h1>
-      <p className="max-w-sm text-muted-foreground">ลองใหม่อีกครั้ง หากยังไม่ได้ กรุณากลับไปหน้าแรก</p>
+      <p className="max-w-sm text-muted-foreground">ลองใหม่อีกครั้ง หากยังไม่ได้ กรุณาไปที่หน้าร้าน</p>
       <div className="mt-2 flex gap-3">
         <Button size="lg" className="h-11 rounded-full px-8" onClick={() => retry()}>
           ลองอีกครั้ง
         </Button>
-        <Link href="/" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-11 rounded-full px-8")}>
-          กลับหน้าแรก
+        <Link href="/landing" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-11 rounded-full px-8")}>
+          ไปหน้าร้าน
         </Link>
       </div>
     </main>

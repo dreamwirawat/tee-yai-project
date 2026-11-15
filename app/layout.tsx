@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Kanit, Prompt } from "next/font/google";
+import { InlineScript } from "@/components/inline-script";
 import { MotionProvider } from "@/components/motion-provider";
 import { OPS_THEME_BOOT_SCRIPT } from "@/lib/ops-theme";
 import "./globals.css";
@@ -33,8 +34,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head>
-        {/* Sets the /ops light/dark theme before first paint (no flash). See lib/ops-theme.ts */}
-        <script dangerouslySetInnerHTML={{ __html: OPS_THEME_BOOT_SCRIPT }} />
+        {/* Sets the Ops dashboard (/) light/dark theme before first paint (no flash). See lib/ops-theme.ts */}
+        <InlineScript html={OPS_THEME_BOOT_SCRIPT} />
       </head>
       <body className="min-h-full flex flex-col">
         <MotionProvider>{children}</MotionProvider>

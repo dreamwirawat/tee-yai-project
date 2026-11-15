@@ -22,7 +22,7 @@ function apply(theme: OpsTheme | null) {
   window.dispatchEvent(new Event(EVENT));
 }
 
-/** Applies the stored theme while /ops is mounted; removes it when leaving /ops. */
+/** Applies the stored theme while the dashboard is mounted; removes it when navigating away. */
 export function OpsThemeController() {
   useLayoutEffect(() => {
     apply(readStoredOpsTheme());

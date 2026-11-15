@@ -293,7 +293,7 @@ function OpsAppBar() {
           <span aria-current="page" className="rounded-md bg-muted px-3 py-1.5 font-medium">
             Dashboard
           </span>
-          <Link href="/" className="rounded-md px-3 py-1.5 text-muted-foreground hover:bg-muted hover:text-foreground">
+          <Link href="/landing" className="rounded-md px-3 py-1.5 text-muted-foreground hover:bg-muted hover:text-foreground">
             หน้าร้าน ↗
           </Link>
         </nav>
